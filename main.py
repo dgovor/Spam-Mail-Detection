@@ -10,7 +10,7 @@ from sklearn.metrics import accuracy_score
 data_set = pd.read_csv('data/mail_data.csv')
 
 # Check for any missing values. Drop if any.
-data_set = data_set.dropna()
+data_set.dropna(inplace=True)
 
 # Encode 'ham' as 0 and 'spam' as 1.
 data_set['Category'].replace({'ham':0,'spam':1},inplace=True)
